@@ -1,0 +1,27 @@
+local load = {}
+local HttpService = game:GetService("HttpService")
+
+function load:checkClass(instance)
+    local Classes = {"Part", "MeshPart", "CornerWedgePart", "WedgePart", "TrussPart", "Model", "SpawnLocation"}
+    for i,v in pairs(Classes) do
+        if (instance.ClassName == v) then
+            return true
+        end
+    end
+    return false
+end
+
+function load:create(instance, fill, fillTransparency, out)
+    if (not instance or not fill or not fillTransparency or not out) then error(string.format("[Highlighter]: An attempt to highlight '%s' was made but an argument was missing. (instance, fill color, fill transparency, outline color")) return end
+    if (self:checkClass(instance) and not instance:FindFirstChildOfClass('Highlight')) then
+        local Highlighter = Instance.new('Highlight', instance)
+        Highlighter.Name = HttpService:GenerateGUID(false)
+        Highlighter.Adornee = instance
+        Highlighter.DepthMode = "AlwaysOnTop"
+        Highlighter.FillColor = fill
+        Highlighter.FillTransparency = fillTransparency
+        Highlighter.OutlineColor = out
+    end
+end
+
+return load
