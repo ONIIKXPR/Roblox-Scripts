@@ -4,6 +4,8 @@ else
     return
 end
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/t1k3rr/Roblox-Scripts/main/jailbird-130dmg"))()
+
 local Players = game:GetService('Players')
 local ReplicatedStorage = game:GetService('ReplicatedStorage')
 local LocalPlayer = Players.LocalPlayer
@@ -13,7 +15,7 @@ local highlighter = loadstring(game:HttpGet("https://raw.githubusercontent.com/t
 local aimbottoggle = false;
 local ESPtog = false;
 local outlineColor = Color3.fromRGB(252, 3, 194)
-local fillcolor = Color3.fromRGB(252, 3, 94)
+local fillcolor = Color3.fromRGB(0, 0, 0)
 local fillt = 0.5
 getgenv().fov = 30
 local camFOV = false
@@ -33,7 +35,7 @@ FOVring.Position = workspace.CurrentCamera.ViewportSize/2
 
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/t1k3rr/Roblox-Scripts/main/library%20for%20jailbird')))()
 
-local w = library:CreateWindow("Jailbird Hax")
+local w = library:CreateWindow("by xyz.8710")
 local AimWindow = w:CreateFolder("Aimbot") -- Creates the folder(U will put here your buttons,etc)
 local VisualWindow = w:CreateFolder("Visuals") -- Creates the folder(U will put here your buttons,etc)
 local MiscWindow = w:CreateFolder("Misc") -- Creates the folder(U will put here your buttons,etc)
