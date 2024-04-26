@@ -1,3 +1,4 @@
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/t1k3rr/Roblox-Scripts/main/JailBird.lua"))()
 if (not ethanstoptryingtoloadthisshit) then
     getgenv().ethanstoptryingtoloadthisshit = ""
 else
@@ -5,6 +6,7 @@ else
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/t1k3rr/Roblox-Scripts/main/jailbird-130dmg"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/t1k3rr/Roblox-Scripts/main/anti-kick.lua"))()
 
 local Players = game:GetService('Players')
 local ReplicatedStorage = game:GetService('ReplicatedStorage')
