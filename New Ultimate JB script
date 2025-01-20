@@ -294,7 +294,7 @@ do
             }
 
             local Success, Err = pcall(function()
-                ReplicatedStorage.GameEvents.Damage:FireServer(TargetPlayer, 1, GunIdentifier, DamageInfo)
+                ReplicatedStorage.GameEvents.Damage:FireServer(TargetPlayer, 0, GunIdentifier, DamageInfo)
             end)
 
             if not Success then
